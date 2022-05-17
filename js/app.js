@@ -45,7 +45,7 @@ let cityOneSales = {
 
     for (let i = 0; i < hours.length; i++) {
       let liElem = document.createElement('li');
-      console.log(this.cookiesArray[i]);
+      //console.log(this.cookiesArray[i]);
       liElem.textContent = `${hours[i]} ${this.cookiesArray[i]} Cookies`;
       ulElem.appendChild(liElem);
     }
@@ -161,6 +161,7 @@ let cityFourSales = {
     for (let i = 0; i < hours.length; i++) {
       sum += this.cookiesArray.push(Math.ceil(this.hrlyGuests() * this.avgCookies));
     }
+    return sum;
   },
   dailyTotal: function () {
     let sum = 0;
@@ -203,6 +204,13 @@ let cityFiveSales = {
   totalCookies: function () {
     let sum = 0;
     for (let i = 0; i < hours.length; i++) {
+      sum += this.cookiesArray.push(Math.ceil(this.hrlyGuests() * this.avgCookies));
+    }
+    return sum;
+  },
+  dailyTotal: function () {
+    let sum = 0;
+    for (let i = 0; i < this.cookiesArray.length; i++) {
       sum += this.cookiesArray[i];
     }
     return sum;
