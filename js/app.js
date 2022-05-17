@@ -190,3 +190,41 @@ let cityFourSales = {
 };
 cityFourSales.totalCookies();
 cityFourSales.render();
+
+let cityFiveSales = {
+  city: 'Lima',
+  avgCookies: 4.6,
+  minCust: 2,
+  maxCust: 16,
+  hrlyGuests: function () {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  },
+  cookiesArray: [],
+  totalCookies: function () {
+    let sum = 0;
+    for (let i = 0; i < hours.length; i++) {
+      sum += this.cookiesArray[i];
+    }
+    return sum;
+  },
+
+  render: function () {
+    let articleElem = document.createElement('article');
+    cookieSales.appendChild(articleElem);
+
+    let h2Elem = document.createElement('article');
+    h2Elem.textContent = this.city;
+    articleElem.appendChild(h2Elem);
+
+    let ulElem = document.createElement('ul');
+    articleElem.append(ulElem);
+
+    for (let i = 0; i < hours.length; i++) {
+      let liElem = document.createElement('li');
+      liElem.textContent = `${hours[i]} ${this.cookiesArray[i]} Cookies`;
+      ulElem.appendChild(liElem);
+    }
+  }
+};
+cityFiveSales.totalCookies();
+cityFiveSales.render();
