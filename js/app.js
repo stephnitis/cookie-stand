@@ -76,7 +76,7 @@ let cityTwoSales = {
   dailyTotal: function () {
     let sum = 0;
     for (let i = 0; i < this.cookiesArray.length; i++) {
-      console.log(sum);
+      //console.log(sum);
       sum += this.cookiesArray[i];
     }
     return sum;
@@ -95,7 +95,7 @@ let cityTwoSales = {
 
     for (let i = 0; i < hours.length; i++) {
       let liElem = document.createElement('li');
-      console.log(this.cookiesArray[i]);
+      //console.log(this.cookiesArray[i]);
       liElem.textContent = `${hours[i]} ${this.cookiesArray[i]} Cookies`;
       ulElem.appendChild(liElem);
     }
@@ -103,3 +103,47 @@ let cityTwoSales = {
 };
 cityTwoSales.totalCookies();
 cityTwoSales.render();
+
+let cityThreeSales = {
+  city: 'Dubai',
+  avgCookies: 3.7,
+  minCust: 11,
+  maxCust: 38,
+  hrlyGuests: function () {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  },
+  cookiesArray: [],
+  totalCookies: function () {
+    for (let i = 0; i < hours.length; i++) {
+      this.cookiesArray.push(Math.ceil(this.hrlyGuests() * this.avgCookies));
+    }
+  },
+  dailyTotal: function () {
+    let sum = 0;
+    for (let i = 0; i < this.cookiesArray.length; i++) {
+      sum += this.cookiesArray[i];
+    }
+    return sum;
+  },
+
+  render: function () {
+    let articleElem = document.createElement('article');
+    cookieSales.appendChild(articleElem);
+
+    let h2Elem = document.createElement('h2');
+    h2Elem.textContent = this.city;
+    articleElem.appendChild(h2Elem);
+
+    let ulElem = document.createElement('ul');
+    articleElem.append(ulElem);
+
+    for (let i = 0; i < hours.length; i++) {
+      let liElem = document.createElement('li');
+      liElem.textContent = `${hours[i]} ${this.cookiesArray[i]} Cookies`;
+      ulElem.appendChild(liElem);
+    }
+  }
+};
+cityThreeSales.totalCookies();
+cityThreeSales.render();
+
