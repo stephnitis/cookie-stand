@@ -13,6 +13,7 @@ let cityOneSales = {
   avgCookies: 6.3,
   minCust: 23,
   maxCust: 65,
+  cookiesDaily: [],
   hrlyGuests: function () {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
@@ -28,6 +29,7 @@ let cityOneSales = {
     for (let i = 0; i < this.cookiesArray.length; i++) {
       console.log(sum);
       sum += this.cookiesArray[i];
+      this.cookiesDaily.push(sum);
     }
     return sum;
   },
@@ -49,21 +51,26 @@ let cityOneSales = {
       liElem.textContent = `${hours[i]} ${this.cookiesArray[i]} Cookies`;
       ulElem.appendChild(liElem);
     }
-
+    let li2Elem = document.createElement('li');
+    li2Elem.textContent = `Total: ${this.cookiesDaily[13]} Cookies`;
+    ulElem.appendChild(li2Elem);
   }
 };
 cityOneSales.totalCookies();
+cityOneSales.dailyTotal();
 cityOneSales.render();
 
-//console.log(cityOneSales.hrlyGuests());
-//console.log(cityOneSales);
-//console.log(cityOneSales.dailyTotal());
+console.log(cityOneSales);
+console.log(cityOneSales.hrlyGuests());
+console.log(cityOneSales.dailyTotal());
+console.log(cityOneSales.cookiesDaily);
 
 let cityTwoSales = {
   city: 'Tokyo',
   avgCookies: 1.2,
   minCust: 3,
   maxCust: 24,
+  cookiesDaily: [],
   hrlyGuests: function () {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
@@ -78,6 +85,7 @@ let cityTwoSales = {
     for (let i = 0; i < this.cookiesArray.length; i++) {
       //console.log(sum);
       sum += this.cookiesArray[i];
+      this.cookiesDaily.push(sum);
     }
     return sum;
   },
@@ -99,9 +107,13 @@ let cityTwoSales = {
       liElem.textContent = `${hours[i]} ${this.cookiesArray[i]} Cookies`;
       ulElem.appendChild(liElem);
     }
+    let li2Elem = document.createElement('li');
+    li2Elem.textContent = `Total: ${this.cookiesDaily[13]} Cookies`;
+    ulElem.appendChild(li2Elem);
   }
 };
 cityTwoSales.totalCookies();
+cityTwoSales.dailyTotal();
 cityTwoSales.render();
 
 let cityThreeSales = {
@@ -109,6 +121,7 @@ let cityThreeSales = {
   avgCookies: 3.7,
   minCust: 11,
   maxCust: 38,
+  cookiesDaily: [],
   hrlyGuests: function () {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
@@ -122,6 +135,7 @@ let cityThreeSales = {
     let sum = 0;
     for (let i = 0; i < this.cookiesArray.length; i++) {
       sum += this.cookiesArray[i];
+      this.cookiesDaily.push(sum);
     }
     return sum;
   },
@@ -142,9 +156,13 @@ let cityThreeSales = {
       liElem.textContent = `${hours[i]} ${this.cookiesArray[i]} Cookies`;
       ulElem.appendChild(liElem);
     }
+    let li2Elem = document.createElement('li');
+    li2Elem.textContent = `Total: ${this.cookiesDaily[13]} Cookies`;
+    ulElem.appendChild(li2Elem);
   }
 };
 cityThreeSales.totalCookies();
+cityThreeSales.dailyTotal();
 cityThreeSales.render();
 
 let cityFourSales = {
@@ -152,6 +170,7 @@ let cityFourSales = {
   avgCookies: 2.3,
   minCust: 20,
   maxCust: 38,
+  cookiesDaily: [],
   hrlyGuests: function () {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
@@ -167,6 +186,7 @@ let cityFourSales = {
     let sum = 0;
     for (let i = 0; i < this.cookiesArray.length; i++) {
       sum += this.cookiesArray[i];
+      this.cookiesDaily.push(sum);
     }
     return sum;
   },
@@ -187,9 +207,13 @@ let cityFourSales = {
       liElem.textContent = `${hours[i]} ${this.cookiesArray[i]} Cookies`;
       ulElem.appendChild(liElem);
     }
+    let li2Elem = document.createElement('li');
+    li2Elem.textContent = `Total: ${this.cookiesDaily[13]} Cookies`;
+    ulElem.appendChild(li2Elem);
   }
 };
 cityFourSales.totalCookies();
+cityFourSales.dailyTotal();
 cityFourSales.render();
 
 let cityFiveSales = {
@@ -197,6 +221,7 @@ let cityFiveSales = {
   avgCookies: 4.6,
   minCust: 2,
   maxCust: 16,
+  cookiesDaily: [],
   hrlyGuests: function () {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
@@ -212,6 +237,7 @@ let cityFiveSales = {
     let sum = 0;
     for (let i = 0; i < this.cookiesArray.length; i++) {
       sum += this.cookiesArray[i];
+      this.cookiesDaily.push(sum);
     }
     return sum;
   },
@@ -232,7 +258,11 @@ let cityFiveSales = {
       liElem.textContent = `${hours[i]} ${this.cookiesArray[i]} Cookies`;
       ulElem.appendChild(liElem);
     }
+    let li2Elem = document.createElement('li');
+    li2Elem.textContent = `Total: ${this.cookiesDaily[13]} Cookies`;
+    ulElem.appendChild(li2Elem);
   }
 };
 cityFiveSales.totalCookies();
+cityFiveSales.dailyTotal();
 cityFiveSales.render();
