@@ -36,44 +36,42 @@ a:hover {
   color: transparent;
 }
 
-#sales {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Helvetica Neue", "Arial", sans-serif;
-  color: hsl(88, 71%, 86%);
-  font-size: 20pt;
-  background-color: rgb(8, 36, 33);
-  text-align: center;
-  width: 25%;
-  padding: 10px;
-  border-radius: 25px;
-}
-
 body {
   background-color: salmon;
   font-family: "Helvetica Neue", "Arial", sans-serif;
   color: hsl(87, 44%, 95%)
 }
 
+#about-us {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 #family {
+  height: 300px;
+  display: flex;
+  justify-content: flex-start;
   border-radius: 25px;
 }
-
-table {
-  width: 50%;
-  margin-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
+p {
+  display: flex;
   align-content: center;
-  background-color: hsl(87, 44%, 95%);
-  text-align: center;
+  margin-left: 20px;
+  height: 300px;
+  max-width: 400px;
+  
 }
 
-th, td {
-  border: 3px solid;
-  padding: 10px;
-  color: rgba(33, 7, 7, 0.863);
-  font-size: 15pt;
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+}
 
+#chinook {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 70px
 }
