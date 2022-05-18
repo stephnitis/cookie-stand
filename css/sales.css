@@ -9,15 +9,14 @@ h1 {
   -webkit-text-stroke-color: rgba(33, 7, 7, 0.863);
 
 }
-
-#salmon {
+nav ul {
   display: flex;
-  justify-content: center;
-  margin: auto;
-  height: 100px;
-  padding: 10px;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  color: hsl(87, 44%, 95%);
 }
-
 nav ul {
   display: flex;
   justify-content: space-evenly;
@@ -35,7 +34,6 @@ a:link {
 a:hover {
   color: transparent;
 }
-
 #sales {
   display: flex;
   align-items: center;
@@ -49,17 +47,11 @@ a:hover {
   padding: 10px;
   border-radius: 25px;
 }
-
 body {
   background-color: salmon;
   font-family: "Helvetica Neue", "Arial", sans-serif;
   color: hsl(87, 44%, 95%)
 }
-
-#family {
-  border-radius: 25px;
-}
-
 table {
   width: 50%;
   margin-top: 15px;
