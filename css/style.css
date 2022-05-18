@@ -1,0 +1,51 @@
+h1 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Palette Mosaic', cursive;
+  color: hsl(88, 71%, 86%);
+  font-size: 36pt;
+  
+}
+nav {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  color: hsl(87, 44%, 95%);
+}
+a:link {
+  color: rgba(33, 7, 7, 0.863);
+  text-decoration: none
+}
+a:hover {
+  color: whitesmoke;
+}
+h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  color: hsl(88, 71%, 86%);
+  font-size: 15pt;
+}
+
+body {
+  background-color: salmon;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  color: hsl(87, 44%, 95%)
+}
+
+table {
+  width: 50%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  text-align: center;
+}
+
+th, td {
+  border: 2px solid;
+  padding: 8px;
+
+}
