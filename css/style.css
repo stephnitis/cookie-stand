@@ -2,31 +2,37 @@ h1 {
   margin-top: 15px;
   margin-bottom: 10px;
   text-align: center;
-  font-family: 'Palette Mosaic', cursive;
+  font-family: 'Gloria Hallelujah', cursive;
   color: hsl(88, 71%, 86%);
-  font-size: 36pt;
-  
+  font-size: 60pt;
+  -webkit-text-stroke: 3px;
+  -webkit-text-stroke-color: rgba(33, 7, 7, 0.863);
+
 }
+
 nav {
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: "Helvetica Neue", "Arial", sans-serif;
   color: hsl(87, 44%, 95%);
 }
+
 a:link {
   color: rgba(33, 7, 7, 0.863);
   text-decoration: none
 }
+
 a:hover {
   color: whitesmoke;
 }
+
 h2 {
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
   font-family: "Helvetica Neue", "Arial", sans-serif;
   color: hsl(88, 71%, 86%);
-  font-size: 15pt;
+  font-size: 20pt;
 }
 
 body {
@@ -37,15 +43,18 @@ body {
 
 table {
   width: 50%;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   align-content: center;
+  background-color: hsl(87, 44%, 95%);
   text-align: center;
 }
 
 th, td {
-  border: 2px solid;
-  padding: 8px;
+  border: 3px solid;
+  padding: 10px;
+  color: rgba(33, 7, 7, 0.863);
+  font-size: 15pt;
 
 }
