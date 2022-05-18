@@ -18,12 +18,12 @@ nav {
 }
 
 a:link {
-  color: rgba(33, 7, 7, 0.863);
+  color: whitesmoke;
   text-decoration: none
 }
 
 a:hover {
-  color: whitesmoke;
+  color: transparent;
 }
 
 h2 {
