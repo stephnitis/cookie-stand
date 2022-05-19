@@ -1,0 +1,80 @@
+h1 {
+  width:100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: hsl(88, 71%, 86%);
+  font-size: 60pt;
+  -webkit-text-stroke: 3px;
+  -webkit-text-stroke-color: rgba(33, 7, 7, 0.863);
+
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  color: hsl(87, 44%, 95%);
+}
+
+a:link {
+  color: whitesmoke;
+  text-decoration: none
+}
+
+a:hover {
+  color: transparent;
+}
+
+body {
+  align-content: center;
+  background-color: salmon;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  color: hsl(87, 44%, 95%)
+}
+
+#location-sales {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#sales {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 50%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsl(87, 44%, 95%);
+  text-align: center;
+  justify-content: center;
+  }
+
+#h2-sales {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  color: hsl(88, 71%, 86%);
+  font-size: 20pt;
+  background-color: rgb(8, 36, 33);
+  text-align: center;
+  width: 25%;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+th,
+td {
+  border: 3px solid;
+  padding: 10px;
+  color: rgba(33, 7, 7, 0.863);
+  font-size: 15pt;
+
+}
