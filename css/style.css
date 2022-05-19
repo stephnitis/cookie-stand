@@ -61,11 +61,11 @@ body {
   display: flex;
   align-self: center;
   border-radius: 25px;
-  border: 2px solid;
+  border: 3px solid;
   border-color: rgba(33, 7, 7, 0.863);
 }
 
-p {
+#about-text {
   display: flex;
   align-self: center;
   margin-top: 20px;
@@ -74,6 +74,73 @@ p {
   text-align: center;
   line-height: 1.6;
 }
+#production {
+  width: 100%;
+  display: flex;
+  justify-content: center;  
+}
+#cutter {
+  height: 200px;
+  margin-top: 50px;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: rgba(33, 7, 7, 0.863);
+}
+#text-bub1, #text-bub2 {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: hsl(88, 71%, 86%);
+  color: rgba(33, 7, 7, 0.863);
+  border: 4px solid;
+  border-color: rgba(33, 7, 7, 0.863);
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  line-height: 1.6;
+}
+#deco-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#deco {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: rgba(33, 7, 7, 0.863);
+}
+
+#merch {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+
+#fish-print {
+  width: 300px;
+  display: flex;
+  text-align: left;
+}
+
+#gyotaku {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 200px;
+  display: flex;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: rgba(33, 7, 7, 0.863);
+}
+
 
 footer {
   display: flex;
