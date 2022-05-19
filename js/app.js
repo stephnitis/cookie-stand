@@ -97,15 +97,21 @@ renderAllCities();
 function handleSubmit(event) {
   event.preventDefault();
 
-  let location = event.target.location.value;
+  let city = event.target.city.value;
+  let minCust = event.target.minCust.value;
+  let maxCust = event.target.maxCust.value;
+  let avgCookies = event.target.avgCookies.value;
+  let newCitySales = new CitySales(city, avgCookies, minCust, maxCust);
 
-  let newCity = new CitySales(city,);
+
+  newCitySales.hrlyGuests(minCust, maxCust);
+  newCitySales.totalCookies(avgCookies);
+  newCitySales.dailyTotal();
+  newCitySales.render();
+  cookieForm.reset();
 }
-
-newCity.render();
-cookieForm.reset();
-
 cookieForm.addEventListener('submit', handleSubmit);
+
 
 
 //console.log(renderAllCities());
