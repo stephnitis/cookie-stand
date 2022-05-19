@@ -32,7 +32,7 @@ CitySales.prototype.totalCookies = function () {
   CitySales.prototype.dailyTotal = function () {
     let sum = 0;
     for (let i = 0; i < this.cookiesArray.length; i++) {
-      console.log(sum);
+      //console.log(sum);
       sum += this.cookiesArray[i];
       this.cookiesDaily.push(sum);
     }
@@ -88,7 +88,7 @@ function renderAllCities() {
     fishCookieSales[i].totalCookies();
     fishCookieSales[i].dailyTotal();
     fishCookieSales[i].render();
-    console.log(fishCookieSales[i]);
+    //console.log(fishCookieSales[i]);
   }
 }
 renderHeader();
@@ -112,8 +112,45 @@ function handleSubmit(event) {
 }
 cookieForm.addEventListener('submit', handleSubmit);
 
+function renderFooter() {
+  let tFootEl = document.createElement('tfoot');
+  tableElem.appendChild(tFootEl);
 
+  let thFoot = document.createElement('th');
+  thFoot.textContent = 'Hrly Total';
+  tFootEl.appendChild(thFoot);
 
+  for (let i = 0; i < hours.length; i++) {
+    let footCol1 = document.createElement('td');
+    footCol1.textContent = `${totalHourly[i]}`;
+    tFootEl.appendChild(footCol1);
+  }
+
+  let finalData = document.createElement('td');
+  finalData.textContent = `${grandTotal[13]}`;
+  tFootEl.appendChild(finalData);
+}
+
+let totalHourly = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+function hourlyTotal() {
+  for (let i = 0; i < fishCookieSales.length; i++) {
+    let currentCity = fishCookieSales[i];
+    for (let j = 0; j < currentCity.cookiesArray.length; j++) {
+      totalHourly[j] = totalHourly[j] + currentCity.cookiesArray[j];
+    }
+  }
+}
+let grandTotal = [];
+function gTotal() {
+  let sum = 0;
+  for (let i = 0; i < totalHourly.length; i++) {
+    sum += totalHourly[i];
+    grandTotal.push(sum);
+  }
+}
+hourlyTotal();
+gTotal();
+renderFooter();
 //console.log(renderAllCities());
 
 
