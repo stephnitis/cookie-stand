@@ -4,7 +4,8 @@ let tableElem = document.createElement('table');
 cookieSales.appendChild(tableElem);
 let cookieForm = document.getElementById('my-form');
 let hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM'];
-
+let tFootEl = document.createElement('tfoot');
+tableElem.appendChild(tFootEl);
 // got from MDN docs
 // function randomGuests(min, max) {
 //   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -76,7 +77,6 @@ function renderHeader() {
   tHeadEl.appendChild(th2Elem);
 }
 
-
 new CitySales('Seattle', 6.3, 23, 65);
 new CitySales('Tokyo', 1.2, 3, 24);
 new CitySales('Dubai', 3.7, 11, 38);
@@ -94,30 +94,10 @@ function renderAllCities() {
 renderHeader();
 renderAllCities();
 
-function handleSubmit(event) {
-  event.preventDefault();
-
-  let city = event.target.city.value;
-  let minCust = event.target.minCust.value;
-  let maxCust = event.target.maxCust.value;
-  let avgCookies = event.target.avgCookies.value;
-  let newCitySales = new CitySales(city, avgCookies, minCust, maxCust);
-
-
-  newCitySales.hrlyGuests(minCust, maxCust);
-  newCitySales.totalCookies(avgCookies);
-  newCitySales.dailyTotal();
-  newCitySales.render();
-  cookieForm.reset();
-}
-cookieForm.addEventListener('submit', handleSubmit);
-
 function renderFooter() {
-  let tFootEl = document.createElement('tfoot');
-  tableElem.appendChild(tFootEl);
 
   let thFoot = document.createElement('th');
-  thFoot.textContent = 'Hrly Total';
+  thFoot.textContent = 'Hourly Total';
   tFootEl.appendChild(thFoot);
 
   for (let i = 0; i < hours.length; i++) {
@@ -151,6 +131,31 @@ function gTotal() {
 hourlyTotal();
 gTotal();
 renderFooter();
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let city = event.target.city.value;
+  let minCust = parseInt(event.target.minCust.value);
+  let maxCust = parseInt(event.target.maxCust.value);
+  let avgCookies = parseFloat(event.target.avgCookies.value);
+  let newCitySales = new CitySales(city, avgCookies, minCust, maxCust);
+  console.log(fishCookieSales);
+  newCitySales.hrlyGuests(minCust, maxCust);
+  newCitySales.totalCookies(avgCookies);
+  newCitySales.dailyTotal();
+  newCitySales.render();
+  tFootEl.innerHTML = '';
+  totalHourly = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  grandTotal = [];
+  hourlyTotal();
+  gTotal();
+  renderFooter();
+  cookieForm.reset();
+}
+cookieForm.addEventListener('submit', handleSubmit);
+
+
 //console.log(renderAllCities());
 
 
